@@ -1,10 +1,10 @@
 # * print your name 5 times
-print("Dovile "*5)
+print("Dovile "*10)
 # * print Bananananana using "Ba" once and "na" 5 times
 print("Ba"+"na"*5)
 # * print the number of seconds in a year calculated from months, days, minutes, seconds
 months = 12
-days = ((365)/12)
+days = (365/12)
 hours = 24
 minutes = 60
 seconds = 60*minutes*hours*days*months
