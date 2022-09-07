@@ -1,1 +1,1 @@
-print(t)
+print("x","y")
