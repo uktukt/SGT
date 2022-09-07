@@ -4,11 +4,7 @@ print("Dovile "*10)
 print("Ba"+"na"*5)
 # * print the number of seconds in a year calculated from months, days, minutes, seconds
 months = 12
-<<<<<<< HEAD
-days = (365/12)
-=======
 days = 365/12
->>>>>>> 7558c9913ff88586b4022840dee9257b63fddb3e
 hours = 24
 minutes = 60
 seconds = 60*minutes*hours*days*months
