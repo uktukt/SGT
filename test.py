@@ -9,4 +9,4 @@
 nr = input("num")
 nr = float(nr)
 nr = nr *2
-print(f"double {nr}")
+print(f"double {nr}😄" )
