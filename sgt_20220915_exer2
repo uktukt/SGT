@@ -11,4 +11,3 @@
 # In principle, this is a good start to the game of hangman.
 # https://en.wikipedia.org/wiki/Hangman_(game)
 
-import string
