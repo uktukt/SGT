@@ -18,7 +18,7 @@ cube2 = int(input("enter 2nd number "))
 
 cubes = []
 for i in range(cube1, cube2+1,1):
-    cubes.append(i**2)
-    print(str(i) + " cubed: " + str(i**2))
+    cubes.append(i**3)
+    print(str(i) + " cubed: " + str(i**3))
 
 print("All cubes:",cubes)
