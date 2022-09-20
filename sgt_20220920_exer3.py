@@ -13,7 +13,7 @@
 # PS Split and join operations could be useful here.
 
 # text = input("enter sentence ")
-text = as noriu valgyti
+text = 
 
 text_list = []
 
