@@ -13,7 +13,7 @@
 #     print(f"I am sure that {n} is a prime number!")
 
 
-nr = int(input("how many first prime numbers do you want? "))
+nr = int(input("how many prime numbers do you want? "))
 prime_nr = []
     
 for c in range(2, 1000_000):
