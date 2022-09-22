@@ -15,9 +15,10 @@
 
 nr = int(input("how many prime numbers do you want? "))
 prime_nr = []
+range_end = 1000_000
     
-for c in range(2, 1000_000):
-    for i in range(2, int(1000_000**0.5)+1): # so we check only up to and including square root of n /int(nr**0.5)+1
+for c in range(2, range_end):
+    for i in range(2, int(range_end**0.5)+1): # so we check only up to and including square root of n /int(nr**0.5)+1
         if c % i == 0:
             break
         else:
