@@ -7,16 +7,16 @@
 # PSS function should return the result, not print it.
 
 def add_mult(a, b , c):
-    if a < b and b < c or a==b or a==b==c:
+    if a <= b and b <= c:
         result = (a + b) * c
         return result
-    if a < b and c < b or a==c:
+    if a <= c and c < b or a==c:
         result = (a + c) * b
         return result
-    if a > b and a > c or b==c:
+    if a > b and b >= c or b==c:
         result = (b + c) * a
         return result
 
-result_to_print = add_mult(1, 1, 1)
+result_to_print = add_mult(6, 1, 1)
 print(result_to_print)
 
