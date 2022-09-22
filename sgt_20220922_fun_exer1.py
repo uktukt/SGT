@@ -10,10 +10,10 @@ def add_mult(a, b , c):
     if a <= b and b <= c:
         result = (a + b) * c
         return result
-    if a <= c and c < b or a==c:
+    if a <= c and c < b:
         result = (a + c) * b
         return result
-    if a > b and b >= c or b==c:
+    if a > b and b >= c:
         result = (b + c) * a
         return result
 
