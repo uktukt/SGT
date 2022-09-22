@@ -17,6 +17,6 @@ def add_mult(a, b , c):
         result = (b + c) * a
         return result
 
-result2 = add_mult(1, 1, 1)
-print(result2)
+result_to_print = add_mult(1, 1, 1)
+print(result_to_print)
 
