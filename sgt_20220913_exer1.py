@@ -8,14 +8,16 @@
 #  Note: such a task became popular as the first task to ask to determine 
 #  whether a person knows about programming at all smile
 
-i = 1
-for i in range(1,100):
+range_end = 100
+div1 = 3
+div2 = 2
+for i in range(1,range_end+1):
     #print(i)
-    if  i % 5 == 0 and i % 7 == 0:
-        print("FizzBuzz")
-    elif i % 5 == 0:
-        print("Fizz")
-    elif i % 7 == 0:
-        print("Buzz")
-    else:
-        print(i)
+    if  i % div1 == div1 and i % div2 == 0:
+        print("FizzBuzz", end=",")
+    elif i % div1 == 0:
+        print("Fizz", end=",")
+    elif i % div2 == 0:
+        print("Buzz", end=",")
+    elif i % div1 != div1 and i % div2 != 0:
+        print(i, end=",")
