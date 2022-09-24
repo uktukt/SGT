@@ -20,7 +20,6 @@ print(text_ed)
 
 for exchange in text_ed:
     letter = input("enter a letter ")
-    # letter = "a"
     for i, c in enumerate(text_input): # so enumarate returns index and value
         if c == letter:
            text_ed=text_ed[:i]+letter+text_ed[i+1:]
