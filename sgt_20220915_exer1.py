@@ -12,4 +12,4 @@ name = input("enter your name ")
 name_reversed = name[::-1]
 name_cap = name_reversed.capitalize()
 add_text = ",a thorough mess is it not "
-print(name_cap + add_text + name[0])
+print(name_cap + add_text + name[0] + "?")
