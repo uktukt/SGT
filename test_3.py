@@ -1,11 +1,22 @@
-n = 1000000 #how to define positive infinity?
-input_primes=int(input("How many prime numbers do you want to find? Please enter a positive number. "))
-primes = []
-for i in range(2, n):
-	for j in range(2, int(i ** 0.5) + 1): 
- 		if i%j == 0:
- 			break
-	else:
-		primes.append(i)
 
-print(f"Here are first {input_primes} prime numbers",primes[:input_primes])
+text=input("First player, please enter a text ")
+space = " "
+asterisk="*"
+new_text=""
+
+for c in text: 
+        new_text += asterisk 
+
+print(new_text)
+
+while asterisk in new_text:
+    letter=input("Second player, please enter a letter ")
+   # letter="a"
+    for i, c in enumerate(text): # so enumarate returns index and value
+        if c == letter:
+           new_text=new_text[:i]+letter+new_text[i+1:]
+    print(new_text)
+
+#NOT WORKING
+print("GAME OVER")
+print(new_text)
