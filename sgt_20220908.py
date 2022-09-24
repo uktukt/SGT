@@ -1,3 +1,5 @@
+import datetime
+
 # Write a program that asks for and saves a username
 username = input("what is your name? ")
 # Ask a question about the user's age, using the username in the question.
@@ -9,7 +11,7 @@ age_after = print(f"{username} will be 100 years old after", round(100-age_now),
 # then you will need two additional lines:
 # import datetime # let's talk about imports separately
 
-import datetime
+
 current_year = datetime.datetime.now().year
 
 # currentYear = datetime.datetime.now (). yearLet the program also show the year when the user will be 100 years old.
