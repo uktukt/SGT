@@ -26,14 +26,16 @@
 
 def get_city_year(p0, perc, delta, target_p):
     sum = p0 + p0 * perc * 0.01 + delta
-    years = 1
+    # years = 3
 
-    while p0 < target_p:
-        for years in range(1,10):
-            sum1 = p0 * (1 + perc*0.01)**years + delta * (1 + perc*0.01)**(years-1) + delta * (years -1)
-            if sum1 > target_p:
-                print(years)
+    # while p0 < target_p:
+    for years in range(1,20):
+        sum1 = p0 * (1 + perc*0.01)**years + delta * (1 + perc*0.01)**(years-1) + delta * (years -1)
+        print(sum1)
+        if sum1 > target_p:
+            print(years)
             break
-
+        
 get_city_year(1000,2,50,1200)
+# get_city_year(1500, 5, 100, 5000)
 
