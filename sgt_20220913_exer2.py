@@ -19,4 +19,3 @@ for i in range(1,height+1):
     if i > 0:
         stars=i*2-1
         print(" " * (height-i) + "*" * stars)
-
