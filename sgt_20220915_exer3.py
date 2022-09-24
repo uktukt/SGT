@@ -18,4 +18,18 @@
 
 import string
 
-text = input("enter the text here ")
+# text = input("enter a text here ")
+text = "he is not good"
+term1 = "not"
+term2 = "so"
+
+
+if text.find(term1):
+    text_good = text.replace("not bad", "good")
+    if text_good.find(term2):
+         text_good_so = text_good.replace("not so bad", "good")
+         print(text_good_so)
+    else:
+        print(text_good)
+else:
+    print(text)
