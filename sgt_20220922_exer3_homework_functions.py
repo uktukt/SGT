@@ -30,19 +30,18 @@ def get_city_year(p0, perc, delta, target_p):
     for years in range(1,200):
         sum1 = p0 * (1 + perc*0.01)**years + delta * (1 + perc*0.01)**(years-1) + delta * (years -1)
         # print(sum1)
-        # if sum1 > target_p and p0 * (1 + perc*0.01)**years + delta * (1 + perc*0.01)**(years-1) + delta * (years -1):
-        #     print(years)
-        #     break        
+        if sum1 < target_p or perc <= 0 and delta <=0:
+            print("-1")
+            break        
         if sum1 > target_p and p0 * (1 + perc*0.01)**years > delta * (1 + perc*0.01)**(years-1) + delta * (years -1):
             print(years)
             break
-        if sum1 > target_p and p0 * (1 + perc*0.01)**years > delta * (1 + perc*0.01)**(years-1) + delta * (years -1):
+        if p0 * (1 + perc*0.01)**years + delta * (1 + perc*0.01)**(years-1) < delta * (years -1):
             print("-1")
             break
       
-
-get_city_year(1000, 2, -50, 5000)    
-get_city_year(1000,2,50,1200)
-get_city_year(1500, 5, 100, 5000)
-get_city_year(1500000, 2.5, 10000, 2000000)
+# get_city_year(1000, 2, -50, 5000)    
+# get_city_year(1000,2,50,1200)
+# get_city_year(1500, 5, 100, 5000)
+# get_city_year(1500000, 2.5, 10000, 2000000)
 get_city_year(1000, -3, 50, 2000)
