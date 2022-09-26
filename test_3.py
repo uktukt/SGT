@@ -1,8 +1,8 @@
 p0 = 1000
-perc = 2
-delta = -50
+perc = 10
+delta = 5
 target_p = 5000
-years = 100
+years = 10
 
 sum1 = p0 * (1 + perc*0.01)**years + delta * (1 + perc*0.01)**(years-1)
 sum2 = delta * (years -1)
