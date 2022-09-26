@@ -10,6 +10,8 @@
 #  There may also be a solution with Counter from standard Python library
 # but this is definitely not necessary, although it is very elegant smile
 
+from collections import Counter
+
 def get_char_count(text):
     my_counter = {}
     for i in text:
@@ -18,4 +20,6 @@ def get_char_count(text):
         else:
             my_counter[i] = 1
     return my_counter
-get_char_count("hubba bubba")
+
+
+print(get_char_count("hubba bubba"))
