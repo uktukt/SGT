@@ -17,6 +17,5 @@ def get_char_count(text):
             my_counter[i] += 1
         else:
             my_counter[i] = 1
-    print(my_counter)
-
+    return my_counter
 get_char_count("hubba bubba")
