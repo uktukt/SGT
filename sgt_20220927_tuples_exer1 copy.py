@@ -10,4 +10,4 @@ def get_min_avg_max(seq):
     avg = sum(seq)/len(seq)
     return min(seq), avg, max(seq)
 
-print(get_min_avg_max([0,10,1,9]))
+print(get_min_avg_max([0,10,1,9,6]))
