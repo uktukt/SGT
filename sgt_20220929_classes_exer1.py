@@ -30,26 +30,28 @@
 # GĀJU MEKLĒT ZIEMEĻMEITU
 # GARU, TĀLU CEĻU VEICU
 import string
-from tkinter.ttk import Separator
+
 class Song:
     def __init__(self, title, author, lyrics):
         self.title = title
         self.author = author
         self.lyrics = lyrics
-        lyrics1 = "\n".join(lyrics)
         print(f"song title {self.title}, author {self.author}")
-        print(lyrics1)
+
+    def sing(self):
+        for i in self.lyrics:
+            print(i)
+
+    def yell(self):
+        for i in self.lyrics:
+            print(i.upper())
+        
         
 
 ziemelmeita = Song("Ziemeļmeita", "Jumprava", ["Gāju meklēt ziemeļmeitu",
 "Garu, tālu ceļu veicu"])
-# ziemelmeita.sing(1).yell()
-
-
-
-
-
-
+ziemelmeita.sing()
+ziemelmeita.yell()
 
 
 
