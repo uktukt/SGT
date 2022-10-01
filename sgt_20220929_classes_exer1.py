@@ -29,6 +29,24 @@
 # Ziemeļmeita - Jumprava
 # GĀJU MEKLĒT ZIEMEĻMEITU
 # GARU, TĀLU CEĻU VEICU
+
+# 2. Rap class
+# For those feeling comfortable with class syntax, create a Rap class that inherits from Song
+
+# # no new constructor method is necessary (you can if you want)
+#  add a new method break_it with two default parameters max_lines=-1 and drop equal to "yeah", which is similar to sing, but adds a drop after each word .
+
+# Example: 
+
+
+# zrap = Rap("Ziemeļmeita", "Jumprava", ["Gāju meklēt ziemeļmeitu","
+# Garu, tālu ceļu veicu"])
+
+
+# zrap.break_it(1, "yah")
+# Ziemeļmeita - Jumprava
+# Gāju YAH meklēt YAH ziemeļmeitu YAH
+
 import string
 
 class Song:
@@ -45,6 +63,10 @@ class Song:
     def yell(self):
         for i in self.lyrics:
             print(i.upper())
+
+    def rap(self):
+        for i in self.lyrics:
+            print(i.replace(" ", " YAH "), end=" YAH \n")
         
         
 
@@ -52,29 +74,6 @@ ziemelmeita = Song("Ziemeļmeita", "Jumprava", ["Gāju meklēt ziemeļmeitu",
 "Garu, tālu ceļu veicu"])
 ziemelmeita.sing()
 ziemelmeita.yell()
+ziemelmeita.rap()
 
 
-
-# 2. Rap class
-# For those feeling comfortable with class syntax, create a Rap class that inherits from Song
-
-# # no new constructor method is necessary (you can if you want)
-
-
-#  add a new method break_it with two default parameters max_lines=-1 and drop equal to "yeah", which is similar to sing, but adds a drop after each word .
-
-# Example: 
-
-
-
-# zrap = Rap("Ziemeļmeita", "Jumprava", ["Gāju meklēt ziemeļmeitu","
-
-# Garu, tālu ceļu veicu"])
-
-
-
-# zrap.break_it(1, "yah")
-
-# Ziemeļmeita - Jumprava
-
-# Gāju YAH meklēt YAH ziemeļmeitu YAH
