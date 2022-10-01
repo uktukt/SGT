@@ -12,18 +12,14 @@
 
 # PS Split and join operations could be useful here.
 
-# sentence = input('Enter a sentence, please: ')
-# words = sentence.lower().split()
+# sentence = input("enter a sentence ")
+import string
 
-# # reversed_words=[]
-# # for word in words:
-# #     reversed_words.append(word[::-1])
-# # same as above
-# reversed_words = [word[::-1] for word in words]
-# # capitalize the first letter of first word
-# reversed_words[0] = reversed_words[0].capitalize()
-# # create a new string from the list
-# new_sentence = ' '.join(reversed_words)
+sentence = "Alus kauss mans"
+separated = sentence.lower().split()
+sentence_reversed = []
+for i in separated: 
+    sentence_reversed.append(i[::-1])
 
-# #maybe I should check the uppercase...
-# print(new_sentence)
+sentence_again = " ". join(sentence_reversed)
+print(sentence_again)
