@@ -10,4 +10,12 @@
 
 # We ignore spaces and believe that uppercase is as valid as lowercase, i. here A and a -> a
 
+import string
 
+def is_pangram(text, alphabet='abcdefghijklmnopqrstuvwxyz'):
+    text_cleaned = text.lower().replace(" ", "")
+    if set(text_cleaned) == set(alphabet):
+        return print("it is pangram")
+    return print("it is not a pangram")
+    
+is_pangram("Abcdef ghijklmnopqrstuvwxy")
