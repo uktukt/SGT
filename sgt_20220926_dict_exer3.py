@@ -25,3 +25,19 @@
 
 # There are two options: either walk through the copy my_dict.copy.items(), or build a new dictionary. 
 # Dictionary comprehension would be one option.
+
+def replace_dict_value(d, bad_val, good_val):
+    new_dict = {}
+    for key, value in d.items():
+        if value != bad_val:
+            new_dict[key] = value
+        if value == bad_val:
+            new_dict[key] = good_val
+    return new_dict
+
+print(replace_dict_value({'a': 5, 'b': 6, 'c': 5}, 5, 30)) 
+
+my_dict = {'a': 5, 'b': 6, 'c': 5, 'd':3, 'e': 5, 'f': 5, 'g':8}	
+new_dict = replace_dict_value(my_dict, 8)
+print(new_dict)
+print(my_dict)
