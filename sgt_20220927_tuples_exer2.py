@@ -24,6 +24,7 @@ def get_common_elements(seq1, seq2, seq3):
     seq1 = set(seq1)
     seq2 = set(seq2)
     seq3 = set(seq3)
-    return set1
+    return seq1 & seq2 & seq3
 
 print(get_common_elements("abc", ['a', 'b'], ('b', 'c')))
+
