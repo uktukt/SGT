@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.style.use('_mpl-gallery')
+# plt.style.use('_mpl-gallery')
 
 # make data
 x = np.linspace(-10, 10, 21)
