@@ -17,7 +17,7 @@ def get_shuffled_cards():
     var1 = ["A", "Jack", "Queen","King"] + list(range(2,11))
     var2 = ["diamonds ♦", "hearts ♥", "spades ♠", "clubs ♣"]
     cards = list(itertools.product(var1, var2))
-    cards_random = random.sample(cards, len(var1)*len(var2))
+    cards_random = random.sample(cards, len(cards))
     return cards_random
 
 print(get_shuffled_cards())

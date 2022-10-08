@@ -36,15 +36,42 @@
 
 from pathlib import Path
 
+from matplotlib import lines
+
 def file_line_len():
     with open("sherlock_holmes_adventures.txt", encoding="utf-8") as fstream:
         return len(fstream.readlines())
-print(file_line_len())
+# print(file_line_len())
 
 #1b
 fpath = Path("sherlock_holmes_adventures.txt")
 def get_text_lines(fpath):
     with open(fpath, encoding="utf-8") as f:
-        new_text = [line.rstrip() for line in f if line.strip()]
-        return new_text
-print(get_text_lines(fpath))
+        lines = [line.rstrip() for line in f if line.strip()]
+        return lines
+# print(get_text_lines(fpath))
+text_lines = get_text_lines(fpath)
+
+#1c_d
+def save_lines(destpath, lines, sep='\n', encoding='utf-8'):
+    with open(destpath, "w", encoding=encoding) as f:
+        for line in lines:
+            f.write(line + sep)
+
+save_lines("pure_sherlock_b.txt", text_lines)
+text_lines_with_newlines = [line + '\n' for line in text_lines]
+save_lines("pure_sherlock.txt", text_lines_with_newlines, sep="")
+
+#1e
+import string
+def clean_punkts(srcpath, destpath):
+    with open(srcpath, encoding="utf-8") as fin, open(destpath, mode="w", encoding="utf-8") as fout:
+        for line in fin:
+            for character in line:
+                if character in string.punctuation: # you could skip this if and just use replace
+                    line = line.replace(character, '')                    
+            fout.write(line)
+
+srcpath='pure_sherlock.txt'
+destpath='clean_sherlock.txt'
+clean_punkts(srcpath, destpath)
