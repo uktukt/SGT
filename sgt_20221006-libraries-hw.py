@@ -62,5 +62,5 @@ def dice_throws(nr_of_dice, nr_of_throws):
     # return random_list, number_of_throws, r_sum_list
 
 
-print(dice_throws(2,100))
+print(dice_throws(6,1000))
 
