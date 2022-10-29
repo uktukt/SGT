@@ -68,4 +68,44 @@ SELECT building, SUM(years_employed) as Total_years_employed FROM employees GROU
 
 --SQL Lesson 11
 
+SELECT role, COUNT(*) as Number_of_artists FROM employees WHERE role = "Artist"
+
+SELECT role, COUNT(*) FROM employees GROUP BY role
+
+SELECT role, SUM(years_employed) FROM employees GROUP BY role HAVING role = "Engineer"
+
+--SQL Lesson 12
+SELECT director, COUNT(id) as Num_movies_directed FROM movies GROUP BY director
+
+SELECT director, SUM(domestic_sales + international_sales) as Cumulative_sales_from_all_movies
+    FROM movies INNER JOIN boxoffice ON movies.id = boxoffice.movie_id
+        GROUP BY director
+
+--SQL Lesson 13
+INSERT INTO movies VALUES (4, "Toy Story 4", "	John Lasseter", 2022, 99)
+INSERT INTO BoxOffice VALUES (4, 8.7, 340000000, 270000000)
+
+--SQL Lesson 14
+UPDATE movies SET director = "John Lasseter" WHERE id = 2
+UPDATE movies SET Year = 1999 WHERE title = "Toy Story 2"
+UPDATE movies SET title = "Toy Story 3", director = "Lee Unkrich" WHERE id = 11
+
+--SQL Lesson 15
+DELETE FROM movies WHERE year <= 2005
+DELETE FROM movies WHERE Director = 'Andrew Stanton'
+
+--SQL Lesson 16
+CREATE TABLE Database (
+    Name TEXT,
+    Version FLOAT,
+    Download_count INTEGER)
+
+--SQL Lesson 17
+ALTER TABLE Movies ADD COLUMN Aspect_ratio FLOAT DEFAULT 1.23
+ALTER TABLE Movies ADD COLUMN Language TEXT DEFAULT 'English'
+
+--SQL Lesson 18
+DROP TABLE Movies
+DROP TABLE BoxOffice
+
 
