@@ -182,10 +182,13 @@ def return_players(default_computer_name="Alpha NIM"):
             break
     # we will use a tuple to return multiple values
     if player_b_name == "computer":
+        lvl = input("Choose the level (1st - the easiest lvl, 3 - the hardest lvl))")
         # TODO add prompt for computer level - Homework for Thursday
-        return (HumanPlayer(player_a_name), ComputerPlayer(default_computer_name))
+        if lvl == 1:
+            return (HumanPlayer(player_a_name), ComputerPlayer(default_computer_name))
     else:
         return (HumanPlayer(player_a_name), HumanPlayer(player_b_name))
+
 
 # main guard - our main entry point
 if __name__ == "__main__":
