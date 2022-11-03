@@ -9,7 +9,7 @@
 # and will provide methods to interact with the game
 
 # with class based approach
-# functions are called methods and live inside the class
+# functions are called methods and live inside the  class
 
 # TODO have a class to manage database interactions
 
